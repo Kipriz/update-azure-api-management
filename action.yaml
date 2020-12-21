@@ -14,15 +14,15 @@ inputs:
   apiName:
     required: true
     description: 'Unique identifier your API'
+  apiPath:
+    required: true
+    description: 'Path to API in Api Management. E.g. "portal-stage"'
   authorization:
     required: true
     description: 'Access Token from Management API'
   format:
     required: false
     description: 'Format of OpenApi. Default is "openapi+json-link"'
-  path:
-    required: true
-    description: 'Path to API in Api Management. E.g. "portal-stage"'
   openApiLink:
     required: true
     description: 'Link to OpenApi URL'
