@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
 env:
-  RESOURCE_GROUP: 'PRDO2'
+  RESOURCE_GROUP: 'PROD2'
   SERVICE_NAME: 'apixgsi'
   API_PATH: 'portal-stage'
   
