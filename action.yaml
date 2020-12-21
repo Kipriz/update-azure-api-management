@@ -1,0 +1,37 @@
+name: 'Update Azure API Management'
+description: 'This GitHub Action allows you to update your Azure API Management using Management API and endpoint to Openapi file (json or yaml).'
+author: 'Andrey Volkov'
+inputs:
+  subscriptionId:
+    required: true
+    description: 'Your Azure Subscription Id'
+  resourceGroup:
+    required: true
+    description: 'Resource Group of your API Management'
+  serviceName:
+    required: true
+    description: 'Resource Name of your API Management'
+  apiName:
+    required: true
+    description: 'Unique identifier your API'
+  authorization:
+    required: true
+    description: 'Access Token from Management API'
+  format:
+    required: false
+    description: 'Format of OpenApi. Default is "openapi+json-link"'
+  path:
+    required: true
+    description: 'Path to API in Api Management. E.g. "portal-stage"'
+  openApiLink:
+    required: true
+    description: 'Link to OpenApi URL'
+  versionOfApiManagement:
+    required: false
+    description: 'Version of Azure API Management. Default is "2020-06-01-preview"'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+branding:
+  icon: shuffle
+  color: purple

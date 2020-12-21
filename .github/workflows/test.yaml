@@ -1,0 +1,34 @@
+name: 'Manual test'
+on:
+  workflow_dispatch:
+
+env:
+  RESOURCE_GROUP: 'PRDO2'
+  SERVICE_NAME: 'apixgsi'
+  PATH: 'portal-stage'
+  
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+          npm install
+      - run: |
+          npm run build
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./
+        with:
+          subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          resourceGroup: ${{ env.RESOURCE_GROUP }}
+          serviceName: ${{ env.SERVICE_NAME }}
+          apiName: ${{ secrets.API_NAME }}
+          authorization: ${{ secrets.AUTHORIZATION }}
+          path: ${{ env.PATH }}
+          openApiLink: ${{ secrets.OPEN_API_LINK }}
