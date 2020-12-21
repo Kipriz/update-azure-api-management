@@ -8336,7 +8336,7 @@ async function run() {
         const serviceName = core.getInput("serviceName", required);
         const apiName = core.getInput("apiName", required);
         const authorization = core.getInput("authorization", required);
-        const path = core.getInput("path", required);
+        const apiPath = core.getInput("apiPath", required);
         const linkToOpenApi = core.getInput("openApiLink", required);
 
         /* optional parameters */
@@ -8348,7 +8348,7 @@ async function run() {
         const link = `https://management.azure.com/subscriptions/${subscriptionId}/resourceGroups/${resourceGroup}/providers/Microsoft.ApiManagement/service/${serviceName}/apis/${apiName}?api-version=${version}`
         const data = {
             properties: {
-                path: path,
+                path: apiPath,
                 format: format,
                 value: linkToOpenApi
             }

@@ -32,5 +32,5 @@ jobs:
           serviceName: ${{ env.SERVICE_NAME }}
           apiName: ${{ secrets.API_NAME }}
           authorization: ${{ secrets.AUTHORIZATION }}
-          path: ${{ env.API_PATH }}
+          apiPath: ${{ env.API_PATH }}
           openApiLink: ${{ secrets.OPEN_API_LINK }}
