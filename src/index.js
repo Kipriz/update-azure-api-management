@@ -26,7 +26,7 @@ async function run() {
         core.info(`apiPath: ${apiPath}`);
         core.info(`linkToOpenApi: ${linkToOpenApi}`);
 
-        const link = `https://management.azure.com/subscriptions/${subscriptionId}/resourceGroups/${resourceGroup}/providers/Microsoft.ApiManagement/service/${serviceName}/apis/${apiName}?api-version=${version}`;
+        const link = `https://apixgsi.management.azure-api.net/subscriptions/${subscriptionId}/resourceGroups/${resourceGroup}/providers/Microsoft.ApiManagement/service/${serviceName}/apis/${apiName}?api-version=${version}`;
         const data = {
             properties: {
                 path: apiPath,
