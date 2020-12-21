@@ -1,5 +1,5 @@
-name: 'Update Azure API Management'
-description: 'This GitHub Action allows you to update your Azure API Management using Management API and endpoint to Openapi file (json or yaml).'
+name: 'Update Azure API Management Services'
+description: 'This GitHub Action allows you to update your Azure API Management using Management API and endpoint to OpenApi URL'
 author: 'Andrey Volkov'
 inputs:
   subscriptionId:
